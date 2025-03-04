@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', animateOnScroll);
 
 // Mobile menu toggle for smaller screens
 const createMobileMenu = () => {
-  const header = document.querySelector('header');
+  const mobileMenuContainer = document.querySelector('.mobile-menu-container');
   
   // Create mobile menu button
   const mobileMenuBtn = document.createElement('button');
   mobileMenuBtn.classList.add('mobile-menu-btn');
   mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-  header.prepend(mobileMenuBtn);
+  mobileMenuContainer.appendChild(mobileMenuBtn);
   
   // Add mobile menu functionality
   mobileMenuBtn.addEventListener('click', () => {
@@ -103,8 +103,24 @@ const createMobileMenu = () => {
   const mobileStyle = document.createElement('style');
   mobileStyle.textContent = `
     @media (max-width: 768px) {
+      .header-container {
+        position: relative;
+      }
+      
+      .mobile-menu-container {
+        display: block;
+      }
+      
       nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #f0f0f0;
+        z-index: 100;
+        padding: 10px;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
       }
       
       nav.active {
@@ -131,7 +147,7 @@ const createMobileMenu = () => {
     }
     
     @media (min-width: 769px) {
-      .mobile-menu-btn {
+      .mobile-menu-btn, .mobile-menu-container {
         display: none;
       }
     }
