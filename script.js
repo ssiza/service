@@ -105,10 +105,15 @@ const createMobileMenu = () => {
     @media (max-width: 768px) {
       .header-container {
         position: relative;
+        flex-wrap: wrap;
       }
       
       .mobile-menu-container {
         display: block;
+      }
+      
+      .logo, .theme-toggle, .mobile-menu-container {
+        z-index: 101;
       }
       
       nav {
@@ -117,10 +122,12 @@ const createMobileMenu = () => {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #f0f0f0;
+        background-color: var(--header-bg-color);
         z-index: 100;
-        padding: 10px;
-        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        padding: 15px;
+        box-shadow: 0 5px 5px var(--shadow-color);
+        width: 100%;
+        transition: all 0.3s ease;
       }
       
       nav.active {
@@ -133,7 +140,7 @@ const createMobileMenu = () => {
       }
       
       nav.active li {
-        margin: 10px 0;
+        margin: 12px 0;
         display: block;
       }
       
@@ -143,6 +150,13 @@ const createMobileMenu = () => {
         border: none;
         font-size: 1.5rem;
         cursor: pointer;
+        color: var(--text-color);
+        padding: 5px;
+        transition: color 0.3s ease;
+      }
+      
+      .mobile-menu-btn:hover {
+        color: var(--primary-color);
       }
     }
     

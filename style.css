@@ -334,6 +334,17 @@ footer {
     transition: transform 0.3s ease;
 }
 
+@media (max-width: 480px) {
+    .service-image-container {
+        height: 180px;
+    }
+    
+    .preview-image {
+        max-width: 95%;
+        max-height: 80%;
+    }
+}
+
 .service-image-container:hover .service-image {
     transform: scale(1.05);
 }
@@ -653,9 +664,30 @@ footer {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .header-container, .feature-grid, .services-grid, .testimonial-container, 
+    .portfolio-grid, .team-grid, .faq-container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .services-grid, .portfolio-grid, .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.2em;
+    }
+    
+    .hero p {
+        font-size: 1em;
+        padding: 0 20px;
     }
     
     .feature-grid, .testimonial-container {
@@ -666,10 +698,13 @@ footer {
     .feature-card, .testimonial {
         width: 100%;
         max-width: 400px;
+        margin-bottom: 20px;
     }
     
     .newsletter-form {
         flex-direction: column;
+        width: 90%;
+        max-width: 500px;
     }
     
     .newsletter-input, .newsletter-button {
@@ -678,7 +713,54 @@ footer {
         margin-bottom: 10px;
     }
     
-    .services-grid {
+    .services-grid, .portfolio-grid, .team-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .portfolio-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .faq-question h3 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8em;
+    }
+    
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+    
+    section {
+        padding: 40px 15px;
+    }
+    
+    .section h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    
+    .portfolio-item, .team-member {
+        height: auto;
+    }
+    
+    .team-photo {
+        height: 200px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .social-icons {
+        margin-top: 15px;
     }
 }
