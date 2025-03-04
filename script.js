@@ -159,7 +159,64 @@ const createMobileMenu = () => {
 document.addEventListener('DOMContentLoaded', () => {
   createMobileMenu();
   initializeServices();
+  initializePortfolio();
+  initializeFAQ();
+  initializeDarkMode();
 });
+
+// FAQ accordion functionality
+function initializeFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Close all other FAQ items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item && otherItem.classList.contains('active')) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current item
+      item.classList.toggle('active');
+    });
+  });
+}
+
+// Portfolio filtering functionality
+function initializePortfolio() {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      // Add active class to clicked button
+      this.classList.add('active');
+      
+      const filterValue = this.getAttribute('data-filter');
+      
+      portfolioItems.forEach(item => {
+        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+  
+  // Portfolio items click - could expand to show details modal
+  portfolioItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Future enhancement: could show a detailed modal
+      console.log('Portfolio item clicked:', this.querySelector('h3').textContent);
+    });
+  });
+}
 
 // Services section functionality
 function initializeServices() {
@@ -228,3 +285,71 @@ function initializeServices() {
     });
   });
 }
+
+
+// Dark mode toggle functionality
+function initializeDarkMode() {
+  const darkModeToggle = document.getElementById('dark-mode-toggle');
+  const icon = darkModeToggle.querySelector('i');
+  
+  // Check for saved user preference
+  const isDarkMode = localStorage.getItem('darkMode') === 'true';
+  
+  // Set initial state
+  if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  }
+  
+  // Toggle dark mode
+  darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Update icon
+    if (document.body.classList.contains('dark-mode')) {
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+      localStorage.setItem('darkMode', 'false');
+    }
+  });
+}
+
+// Update CSS variables for various components in dark mode
+const updateDarkModeStyles = document.createElement('style');
+updateDarkModeStyles.textContent = `
+  .feature-card, .service-card, .testimonial, .team-member, .portfolio-item {
+    background-color: var(--card-bg-color);
+    box-shadow: 0 3px 15px var(--shadow-color);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-price, .team-position {
+    color: var(--primary-color);
+  }
+  
+  .cta-button, .newsletter-button {
+    background-color: var(--primary-color);
+  }
+  
+  .cta-button:hover, .newsletter-button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .read-more-btn, .filter-btn {
+    color: var(--primary-color);
+  }
+  
+  nav a {
+    color: var(--text-color);
+  }
+  
+  nav a:hover {
+    color: var(--primary-color);
+  }
+`;
+document.head.appendChild(updateDarkModeStyles);
