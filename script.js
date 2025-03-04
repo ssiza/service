@@ -140,4 +140,75 @@ const createMobileMenu = () => {
 };
 
 // Initialize mobile menu on page load
-document.addEventListener('DOMContentLoaded', createMobileMenu);
+document.addEventListener('DOMContentLoaded', () => {
+  createMobileMenu();
+  initializeServices();
+});
+
+// Services section functionality
+function initializeServices() {
+  // Read More/Less functionality
+  const readMoreButtons = document.querySelectorAll('.read-more-btn');
+  readMoreButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const descriptionContainer = this.parentElement;
+      const description = descriptionContainer.querySelector('.service-description');
+      
+      if (description.classList.contains('expanded')) {
+        description.classList.remove('expanded');
+        this.textContent = 'Read More';
+      } else {
+        description.classList.add('expanded');
+        this.textContent = 'Read Less';
+      }
+    });
+  });
+  
+  // Image preview functionality
+  const serviceImages = document.querySelectorAll('.service-image');
+  
+  // Create image preview overlay if it doesn't exist
+  if (!document.querySelector('.image-preview-overlay')) {
+    const overlay = document.createElement('div');
+    overlay.classList.add('image-preview-overlay');
+    
+    const previewImage = document.createElement('img');
+    previewImage.classList.add('preview-image');
+    overlay.appendChild(previewImage);
+    
+    const closeButton = document.createElement('div');
+    closeButton.classList.add('close-preview');
+    closeButton.innerHTML = '&times;';
+    closeButton.addEventListener('click', () => {
+      overlay.classList.remove('active');
+    });
+    overlay.appendChild(closeButton);
+    
+    // Close overlay when clicking outside the image
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        overlay.classList.remove('active');
+      }
+    });
+    
+    // Close overlay with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        overlay.classList.remove('active');
+      }
+    });
+    
+    document.body.appendChild(overlay);
+  }
+  
+  // Add click event to service images
+  const overlay = document.querySelector('.image-preview-overlay');
+  const previewImage = overlay.querySelector('.preview-image');
+  
+  serviceImages.forEach(image => {
+    image.addEventListener('click', function() {
+      previewImage.src = this.src;
+      overlay.classList.add('active');
+    });
+  });
+}
