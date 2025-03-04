@@ -1,81 +1,106 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        nav li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .hero {
-            background-color: #eee;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            background-color: #007bff;
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#footer">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <h1>Welcome to Our Landing Page</h1>
         <p>This is a sample landing page with a hero section, navigation menu, and call-to-action button.</p>
-        <button class="cta-button">Learn More</button>
+        <button class="cta-button interactive-element">Learn More</button>
     </section>
 
+    <section id="features" class="features">
+        <h2>Our Key Features</h2>
+        <div class="feature-grid">
+            <div class="feature-card interactive-element">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Fast Performance</h3>
+                <p>Our solution delivers lightning-fast performance with optimized code and efficient algorithms.</p>
+            </div>
+            
+            <div class="feature-card interactive-element">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Secure & Reliable</h3>
+                <p>Built with security in mind, ensuring your data is protected at all times.</p>
+            </div>
+            
+            <div class="feature-card interactive-element">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile Friendly</h3>
+                <p>Fully responsive design that works perfectly on all devices, from desktops to smartphones.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p class="testimonial-text">"This product has completely transformed how our team works. The efficiency gains alone made it worth the investment."</p>
+                <p class="testimonial-author">- Jane Smith, CEO</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I've tried many similar solutions, but this one stands out for its ease of use and powerful features."</p>
+                <p class="testimonial-author">- John Doe, Developer</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"The customer support is exceptional. Any questions we had were answered promptly and professionally."</p>
+                <p class="testimonial-author">- Sarah Johnson, Marketing</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter" class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter to receive the latest updates, news, and special offers.</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-button">Subscribe</button>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
