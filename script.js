@@ -336,10 +336,11 @@ function initializeDarkMode() {
 // Update CSS variables for various components in dark mode
 const updateDarkModeStyles = document.createElement('style');
 updateDarkModeStyles.textContent = `
-  .feature-card, .service-card, .testimonial, .team-member, .portfolio-item {
+  .feature-card, .service-card, .testimonial, .team-member, .portfolio-item, .faq-item {
     background-color: var(--card-bg-color);
     box-shadow: 0 3px 15px var(--shadow-color);
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    color: var(--text-color);
   }
   
   .service-price, .team-position {
@@ -358,12 +359,31 @@ updateDarkModeStyles.textContent = `
     color: var(--primary-color);
   }
   
-  nav a {
+  nav a, .footer-links a {
     color: var(--text-color);
   }
   
-  nav a:hover {
+  nav a:hover, .footer-links a:hover {
     color: var(--primary-color);
+  }
+  
+  .faq-question h3, .service-description, .testimonial-text, .testimonial-author, .team-bio {
+    color: var(--text-color);
+  }
+  
+  .portfolio-overlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  input, textarea, select {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--shadow-color);
+  }
+  
+  ::placeholder {
+    color: var(--placeholder-color, #999);
+    opacity: 0.8;
   }
 `;
 document.head.appendChild(updateDarkModeStyles);
