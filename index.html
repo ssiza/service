@@ -1,311 +1,237 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Landing Page</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="apple-touch-icon" sizes="57x57" href="media/favi/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="media/favi/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="media/favi/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="media/favi/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="media/favi/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="media/favi/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="media/favi/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="media/favi/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="media/favi/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="media/favi/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="media/favi/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="media/favi/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="media/favi/favicon-16x16.png">
+<link rel="manifest" href="media/favi/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="media/favi/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"></head>
 <body>
+<div class="header-hero-container">
     <header>
         <div class="header-container">
             <div class="logo">
                 <a href="#hero">
-                    <img src="https://via.placeholder.com/150x50/007bff/ffffff?text=LOGO" alt="Company Logo">
+                    <img src="media/logo.png" alt="Company Logo">
                 </a>
             </div>
             <nav>
                 <ul>
                     <li><a href="#hero">Home</a></li>
-                    <li><a href="#features">Features</a></li>
+                    <li><a href="#features">Why Us?</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#newsletter">Newsletter</a></li>
                     <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
-            <div class="theme-toggle">
-                <button id="dark-mode-toggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
             <div class="mobile-menu-container"></div>
         </div>
     </header>
-
-    <section id="hero" class="hero">
+    <section class="hero">
         <h1>Welcome to Our Landing Page</h1>
         <p>This is a sample landing page with a hero section, navigation menu, and call-to-action button.</p>
-        <button class="cta-button interactive-element">Learn More</button>
-    </section>
+        <button onclick="location.href='#features'" class="cta-button interactive-element">Learn More</button>
+</div>
 
-    <section id="features" class="features">
-        <h2>Our Key Features</h2>
-        <div class="feature-grid">
-            <div class="feature-card interactive-element">
-                <div class="feature-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <h3>Fast Performance</h3>
-                <p>Our solution delivers lightning-fast performance with optimized code and efficient algorithms.</p>
+<section id="features" class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+        <div class="feature-card interactive-element">
+            <div class="feature-icon">
+                <i class="fas fa-scissors"></i>
             </div>
-            
-            <div class="feature-card interactive-element">
-                <div class="feature-icon">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <h3>Secure & Reliable</h3>
-                <p>Built with security in mind, ensuring your data is protected at all times.</p>
-            </div>
-            
-            <div class="feature-card interactive-element">
-                <div class="feature-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>Mobile Friendly</h3>
-                <p>Fully responsive design that works perfectly on all devices, from desktops to smartphones.</p>
-            </div>
+            <h3>Expert Stylists</h3>
+            <p>Our team of skilled professionals stays up-to-date with the latest trends to give you the perfect look.</p>
         </div>
-    </section>
 
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Web Development" class="service-image">
-                </div>
-                <h3>Web Development</h3>
-                <div class="service-price">$1299</div>
-                <div class="service-description-container">
-                    <p class="service-description">Our web development services include custom website design, responsive development, e-commerce solutions, and ongoing maintenance. We use the latest technologies to ensure your website is fast, secure, and user-friendly.</p>
-                    <button class="read-more-btn">Read More</button>
-                </div>
+        <div class="feature-card interactive-element">
+            <div class="feature-icon">
+                <i class="fas fa-spa"></i>
             </div>
-            
-            <div class="service-card">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mobile App Development" class="service-image">
-                </div>
-                <h3>Mobile App Development</h3>
-                <div class="service-price">$2499</div>
-                <div class="service-description-container">
-                    <p class="service-description">We create native and cross-platform mobile applications that provide seamless user experiences across all devices. Our mobile development team specializes in iOS and Android platforms, ensuring your app meets the highest standards of performance and design.</p>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Digital Marketing" class="service-image">
-                </div>
-                <h3>Digital Marketing</h3>
-                <div class="service-price">$899</div>
-                <div class="service-description-container">
-                    <p class="service-description">Our digital marketing services help you reach your target audience and grow your business online. We offer SEO, social media marketing, content creation, PPC advertising, and comprehensive digital strategy development to maximize your online presence and drive conversions.</p>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="UI/UX Design" class="service-image">
-                </div>
-                <h3>UI/UX Design</h3>
-                <div class="service-price">$1499</div>
-                <div class="service-description-container">
-                    <p class="service-description">Our design team creates intuitive and engaging user interfaces that enhance user experience and drive engagement. We focus on user-centered design principles to ensure your digital products are not only visually appealing but also easy to use and navigate, leading to higher conversion rates and customer satisfaction.</p>
-                    <button class="read-more-btn">Read More</button>
-                </div>
-            </div>
+            <h3>Premium Hair Care</h3>
+            <p>We use top-quality products to nourish and protect your hair, ensuring long-lasting beauty and health.</p>
         </div>
-    </section>
 
-    <section id="testimonials" class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <p class="testimonial-text">"This product has completely transformed how our team works. The efficiency gains alone made it worth the investment."</p>
-                <p class="testimonial-author">- Jane Smith, CEO</p>
+        <div class="feature-card interactive-element">
+            <div class="feature-icon">
+                <i class="fas fa-clock"></i>
             </div>
-            
-            <div class="testimonial">
-                <p class="testimonial-text">"I've tried many similar solutions, but this one stands out for its ease of use and powerful features."</p>
-                <p class="testimonial-author">- John Doe, Developer</p>
-            </div>
-            
-            <div class="testimonial">
-                <p class="testimonial-text">"The customer support is exceptional. Any questions we had were answered promptly and professionally."</p>
-                <p class="testimonial-author">- Sarah Johnson, Marketing</p>
-            </div>
+            <h3>Convenient Appointments</h3>
+            <p>Easy online booking and flexible scheduling to fit your busy lifestyle.</p>
         </div>
-    </section>
 
-    <section id="newsletter" class="newsletter">
-        <h2>Stay Updated</h2>
-        <p>Subscribe to our newsletter to receive the latest updates, news, and special offers.</p>
-        <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" class="newsletter-input" required>
-            <button type="submit" class="newsletter-button">Subscribe</button>
-        </form>
-    </section>
-
-    <footer id="footer">
-        <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Privacy Policy</a>
-
-    <section id="portfolio" class="portfolio">
-        <h2>Our Portfolio</h2>
-        <div class="portfolio-filter">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web</button>
-            <button class="filter-btn" data-filter="mobile">Mobile</button>
-            <button class="filter-btn" data-filter="design">Design</button>
+        <div class="feature-card interactive-element">
+            <div class="feature-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>Personalized Service</h3>
+            <p>We take the time to understand your needs and create a style that suits you perfectly.</p>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" data-category="web">
-                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Web Project 1">
-                <div class="portfolio-overlay">
-                    <h3>E-commerce Website</h3>
-                    <p>Responsive online store with payment integration</p>
-                </div>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="https://images.unsplash.com/photo-1493775379751-a6c3940f3cbc?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Haircuts & Styling" class="service-image">
             </div>
-            <div class="portfolio-item" data-category="mobile">
-                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Mobile Project 1">
-                <div class="portfolio-overlay">
-                    <h3>Fitness Tracker App</h3>
-                    <p>Health monitoring application for iOS and Android</p>
-                </div>
+            <h3>Haircuts & Styling</h3>
+            <div class="service-price">$50</div>
+            <div class="service-description-container">
+                <p class="service-description">From classic cuts to trendy styles, our expert stylists will give you a fresh, customized look that suits your personality and lifestyle.</p>
+                <button class="read-more-btn">Read More</button>
             </div>
-            <div class="portfolio-item" data-category="design">
-                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Design Project 1">
-                <div class="portfolio-overlay">
-                    <h3>Brand Identity</h3>
-                    <p>Complete visual identity for tech startup</p>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="web">
-                <img src="https://images.unsplash.com/photo-1555952517-2e8e729e0b44?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Web Project 2">
-                <div class="portfolio-overlay">
-                    <h3>Corporate Website</h3>
-                    <p>Modern website for financial services firm</p>
-                </div>
-            </div>
+            <button onclick="location.href='booking.html#booking-container'" class="service-button interactive-element">Book Now</service-button>
+
         </div>
-    </section>
+        
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="https://plus.unsplash.com/premium_photo-1664049686108-65af4bbd1119?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hair Coloring" class="service-image">
+            </div>
+            <h3>Hair Coloring</h3>
+            <div class="service-price">$120</div>
+            <div class="service-description-container">
+                <p class="service-description">Enhance your look with professional hair coloring services, including highlights, balayage, ombré, and full-color treatments.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <button onclick="location.href='booking.html#booking-container'" class="service-button interactive-element">Book Now</service-button>
+
+        </div>
+        
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hair Treatments" class="service-image">
+            </div>
+            <h3>Hair Treatments</h3>
+            <div class="service-price">$80</div>
+            <div class="service-description-container">
+                <p class="service-description">Revitalize and nourish your hair with deep conditioning treatments, keratin smoothing, and scalp care solutions tailored to your needs.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <button onclick="location.href='booking.html#booking-container'" class="service-button interactive-element">Book Now</service-button>
+
+        </div>
+        
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="https://images.unsplash.com/photo-1549236177-f9b0031756eb?q=80&w=2486&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bridal & Event Styling" class="service-image">
+            </div>
+            <h3>Bridal & Event Styling</h3>
+            <div class="service-price">$200</div>
+            <div class="service-description-container">
+                <p class="service-description">Look stunning on your big day with our professional bridal and event hairstyling services, tailored to create the perfect look for any occasion.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <button onclick="location.href='booking.html#booking-container'" class="service-button interactive-element">Book Now</service-button>
+
+        </div>
+
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="https://images.unsplash.com/photo-1572955304332-bf714bd49add?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hair Extensions" class="service-image">
+            </div>
+            <h3>Hair Extensions</h3>
+            <div class="service-price">$250</div>
+            <div class="service-description-container">
+                <p class="service-description">Get longer, fuller hair with our high-quality hair extension services. We offer tape-ins, clip-ins, and fusion extensions for a natural look.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <button onclick="location.href='booking.html#booking-container'" class="service-button interactive-element">Book Now</service-button>
+
+        </div>
+
+        <div class="service-card">
+            <div class="service-image-container">
+                <img src="https://images.unsplash.com/photo-1472747624745-ce92d32d3c24?q=80&w=2673&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Scalp & Hair Health Consultation" class="service-image">
+            </div>
+            <h3>Scalp & Hair Health Consultation</h3>
+            <div class="service-price">$60</div>
+            <div class="service-description-container">
+                <p class="service-description">Struggling with hair loss or scalp issues? Our specialists provide consultations and treatments to help restore your hair’s health.</p>
+                <button class="read-more-btn">Read More</button>
+            </div>
+            <button onclick="location.href='booking.html#booking-container'" class="service-button interactive-element">Book Now</service-button>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials" class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <p class="testimonial-text">"Absolutely love my new hairstyle! The stylists here are so talented and really listen to what you want."</p>
+            <p class="testimonial-author">- Emily R., Happy Client</p>
+        </div>
+
+        <div class="testimonial">
+            <p class="testimonial-text">"The best salon experience I've ever had! The atmosphere is relaxing, and the staff is so friendly and professional."</p>
+            <p class="testimonial-author">- Jessica M., Regular Customer</p>
+        </div>
+
+        <div class="testimonial">
+            <p class="testimonial-text">"I always leave this salon feeling amazing. The attention to detail and quality of service are unmatched!"</p>
+            <p class="testimonial-author">- Ashley T., Loyal Client</p>
+        </div>
+    </div>
+</section>
+
+<section id="newsletter" class="newsletter">
+    <h2>Contact Us</h2>
+    <p>Have questions or need an appointment? Send us a message!</p>
+    <form class="newsletter-form">
+        <textarea id="message" placeholder="Your Message" class="newsletter-input" rows="4" required></textarea>
+        <button type="button" class="newsletter-button" onclick="sendEmail()">Send Message</button>
+    </form>
+</section>
+
+<script>
+    /**
+     * Send an email with the given message to the email address specified.
+     * Note: Replace the email address with your actual email.
+     */
+    function sendEmail() {
+        var message = document.getElementById("message").value;
+        var email = "kesnyphotography@gmail.com"; // Replace with your actual email
+        var subject = "Inquiry from Website";
+        var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(message);
+        window.location.href = mailtoLink;
+    }
+</script>
 
 
-    <section id="team" class="team">
-        <h2>Meet Our Team</h2>
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="team-photo">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="John Smith">
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <h3>John Smith</h3>
-                <p class="team-position">CEO & Founder</p>
-                <p class="team-bio">10+ years of experience in tech leadership and software development.</p>
-            </div>
-            
-            <div class="team-member">
-                <div class="team-photo">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sarah Johnson">
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                    </div>
-                </div>
-                <h3>Sarah Johnson</h3>
-                <p class="team-position">Lead Designer</p>
-                <p class="team-bio">Award-winning designer with expertise in UI/UX and brand identity.</p>
-            </div>
-            
-            <div class="team-member">
-                <div class="team-photo">
+<footer id="footer">
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2025 Your Company. All rights reserved.</p>
+    <p>Designed by <a href="https://www.kflix.me">KESNY TOUSSAINT</a></p>
+        <a href="privacy.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+</footer>
 
-    <section id="faq" class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What services do you offer?</h3>
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    <p>We offer a comprehensive range of digital services including web development, mobile app development, UI/UX design, and digital marketing solutions. Each service is tailored to meet the specific needs of your business.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>How long does it take to complete a project?</h3>
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    <p>Project timelines vary based on complexity and scope. A simple website might take 2-4 weeks, while complex applications can take several months. During our initial consultation, we'll provide a more accurate timeline specific to your project.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Do you offer maintenance after project completion?</h3>
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes, we offer ongoing maintenance and support packages to keep your digital products running smoothly. These can include regular updates, security patches, performance optimization, and content updates.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>What is your pricing structure?</h3>
-                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
-                </div>
-                <div class="faq-answer">
-                    <p>We offer flexible pricing options including project-based quotes, hourly rates, and monthly retainers. The right structure depends on your project requirements. Contact us for a customized quote based on your specific needs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="David Brown">
-                    <div class="team-social">
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-stack-overflow"></i></a>
-                    </div>
-                </div>
-                <h3>David Brown</h3>
-                <p class="team-position">Lead Developer</p>
-                <p class="team-bio">Full-stack developer specializing in scalable web applications.</p>
-            </div>
-        </div>
-    </section>
-
-            <a href="#">Terms of Service</a>
-            <a href="#">Contact Us</a>
-        </div>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <p>&copy; 2023 Your Company. All rights reserved.</p>
-        <div class="footer-links"> 
-            <a href="https://www.kflix.me">Powered by KESNY TOUSSAINT</a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
