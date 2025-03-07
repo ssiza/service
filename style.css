@@ -28,7 +28,7 @@ body.dark-mode {
 }
 
 .header-hero-container {
-    background: url('https://images.unsplash.com/photo-1595475884562-073c30d45670?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background: url('media/hero.png') no-repeat center center;
     background-size: cover;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
